@@ -1,5 +1,8 @@
-from tkinter import *
-import math
+from tkinter import Tk
+from tkinter import Entry
+from tkinter import Button
+
+
 root = Tk()
 root.title("Simple Calculator")
 root.configure(bg="#111421")
@@ -9,11 +12,7 @@ entry = Entry(root, width=45, font=4, bg='#111524', fg='#fff')
 entry.config(highlightbackground='#111524', highlightcolor='#111524', highlightthickness=2)
 entry.grid(row=0, column=0, columnspan=4, pady=40, ipady=40)
 
-#def output():
-    #global out
-    #out = entry.get()
-    #label1 = Label(root, text=out, fg='#fff', bg='#111524')
-    #label1.place(x=2, y=250)
+END = "end"
 
 def btnClick(value):
     if value=='clear': return entry.delete(0, END)
